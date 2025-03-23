@@ -1,0 +1,241 @@
+//----------------------------------------------------------------------------------------- LANDING
+
+
+#home{
+    z-index: -50;
+    width: 100vw;
+    //border: 1px solid red;
+    height: 85vh;
+}
+
+.back-image{
+    filter: opacity(100%);
+    filter: blur(5px);
+    width: 100%;
+    height: 250vh;
+    position: absolute;
+    //margin: auto;
+    //display: flex;
+    //overflow: hidden;
+    z-index: -100;
+    top: 0px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.back-image-2{
+    filter: opacity(90%);  // OPACIDAD FONDO
+    width: 100%;
+    height: 251vh;
+    position: absolute;
+    //margin: auto;
+    //display: flex;
+    //overflow: hidden;
+    z-index: -50;
+    top: 0px;
+    background-color: #EDF2FC;
+    object-fit: cover;
+    
+}
+
+.LandingText{
+    flex: 1.6;
+    margin-right: 6em;
+    // border: 1px solid blue;
+    width: 100%;
+    height: auto;
+}
+.LandingText h1, .LandingText span{
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: .5em;
+    line-height: 1.3em;
+}
+
+.LandingText p{
+    margin-bottom: 4em;
+    opacity: .75;
+}
+
+.landing-desc{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.landing-buttons{
+    display: flex;
+    width: 80%;
+    margin-bottom: 8em;
+}
+
+.btn-contact{
+    background-color: transparent;
+    border: 4px solid $rednor;
+    width: 100%;
+    flex: 1;
+    color: #161616;
+}
+
+.btn-cotizar{
+    width: 100%;
+    margin-right: 2em;
+    flex: 2;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    font-size: 3em;
+    gap: .75em;
+}
+
+.social-links i{
+    cursor: pointer;
+    font-size: 1.5em;
+    opacity: .75;
+}
+
+.social-links :hover{
+    color: #F94D4D;
+    transition: all .15s ease-in-out;
+}
+
+.landing-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 100px;
+    // border: 1px solid green;
+    height: 100%;
+    align-items: center;
+}
+
+.landing-img-container{
+    display: flex;
+    flex:1;
+    // border: 1px solid red;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    //min-width: 50%;
+    //max-width: 60%;
+    position: relative;
+    align-items: center;
+}
+
+.landing-img-container img{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    z-index: -20;
+    max-height: 40em;
+    // border: 1px solid red;
+}
+
+
+
+
+// ==================================== MEDIA LAPTOP
+
+
+@media (max-width: 1440px){
+
+
+    
+
+    #home p{
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    #home h1, .LandingText span{
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .LandingText{
+        margin-right: 4em;
+    }
+
+    .landing-img-container{
+        width: 100%;
+    }
+    
+    .landing-img-container img{
+        position: absolute;
+        width: 55em;
+        right: -20em;
+        top: -2em;
+        object-fit: cover;
+        z-index: -20;
+    }
+
+    .landing-buttons{
+        display: flex;
+        width: 80%;
+        margin-bottom: 2em;
+    }
+    
+    .btn-contact{
+        background-color: transparent;
+        border: 4px solid $rednor;
+        width: 100%;
+        flex: 1;
+    }
+    
+    .btn-cotizar{
+        width: 100%;
+        margin-right: 1em;
+        flex: 2;
+    }
+
+    
+
+
+}
+
+
+// ==================================== MEDIA
+
+
+@media (max-width: 1200px){
+
+
+    .landing-img-container{
+        display: none;
+        overflow: hidden;
+    }
+
+    .LandingText{
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #home p{
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+
+    #home h1, .LandingText span{
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    .landing-container{
+        margin: 1.2em;
+    }
+
+    .landing-desc{
+        border-left: 4px solid #ffffffb2;
+        border-radius: 2px;
+    }
+
+    .landing-buttons{
+        margin-bottom: 3em;
+    }
+
+
+
+}

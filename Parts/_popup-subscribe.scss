@@ -1,0 +1,161 @@
+//----------------------------------------------- Section POPUP
+
+#popup-news{
+    display: inline;
+    // display: none;
+}
+
+.hide-popup-news{
+    pointer-events: none;
+    opacity:0;
+    animation: fadeoutin .5s;
+}
+
+.popup-container-news {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 900;
+    background-color: $white;
+    border-radius: 30px;
+    padding: 46px 80px;
+    padding-left: 140px;
+    transition: all .2s ease;
+    animation: fadeinout .2s;
+}
+
+.close-btn{
+    z-index: 950;
+    display: flex;
+    position: absolute;
+    // justify-content:right;
+    left: 94%;
+    top: 3%;
+}
+
+.close-btn img{
+    width: 16px;
+}
+
+.popup-background-news {
+    min-width: 500%;
+    background-color:rgba(12, 12, 12, 0.616);
+    min-height: 500%;
+    position: fixed;
+    z-index: 800;
+    top: -100px;
+    // display: none;                              // CHANGE THIS
+}
+
+.marni-container-news{
+    z-index: 400;
+}
+
+.marni{
+    position: absolute;
+    top: 45%;
+    left: -7%;
+    transform:translate(-50%, -50%);
+    width: 800px;
+    z-index: 400;
+    user-select: none;
+}
+
+.btn-popup-news{
+    width:100%;
+    z-index: 1000;
+    border:none;
+    font-size: 1em;
+}
+
+.popup-text-news h2{
+    color: $black;
+    font-size:52px;
+    font-weight: 600;
+    line-height: 80px;
+    
+}
+.popup-text-news p{
+    color: $black;
+    font-size:20px;
+}
+
+.popup-text-news{
+    text-align:right;
+    margin-bottom: 140px;
+    z-index: 950;
+}
+
+.popup-log-news{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    z-index: 950;
+}
+
+.popup-input-news{
+    margin-bottom: 40px;
+    text-decoration: none;
+    padding-bottom:16px;
+    border:none;
+    border-bottom: 1px solid rgba(2, 1, 22, 0.295);
+    padding-left: 10px;
+    z-index: 950;
+    font-size: 20px;
+    background-color: transparent;
+    color: $black;
+}
+
+// ---------------------------------------------------------------- MOBILE
+
+@media (max-width: 1200px){
+
+    .marni-container-news{
+        display: none;
+    }
+
+    .popup-container-news {
+        padding: 2em 2em;
+    }
+
+    .popup-text-news{
+        text-align:center;
+        margin-bottom: 3em;
+        z-index: 950;
+    }
+
+    .popup-text-news h2{
+        font-size: 2em;
+    }
+
+    .popup-text-news p{
+        font-size:.6em;
+    }
+
+
+    .popup-input-news{
+        margin-bottom: 2em;
+        padding-bottom:16px;
+        padding-left: 10px;
+        font-size: .75em;
+    }
+
+    .btn-popup-news{
+        width:100%;
+        z-index: 1000;
+        border:none;
+        font-size: .75em;
+    }
+    
+
+    .close-btn{
+        z-index: 950;
+        display: flex;
+        position: absolute;
+        // justify-content:right;
+        left: 85%;
+        top: 3%;
+    }
+
+}

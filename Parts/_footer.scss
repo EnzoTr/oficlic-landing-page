@@ -1,0 +1,144 @@
+//------------------------------ FOOTER
+
+#end{
+    margin: 0 auto;
+    padding: 1em 100px;
+    //margin-bottom: 80px;
+    background-color: #313541;
+}
+
+#end p,h4,a{
+    color: aliceblue;
+}
+
+.end-container-2 img{
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.end-container-2{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    //align-items: center;
+    // border: 1px solid red;
+    padding-bottom: 70px;
+    margin-bottom: 4em;
+    padding-top: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+    height: 100%;
+    gap: 5em;
+}
+
+
+.end-container-3 a {
+    font-size: 20px;
+    margin-bottom: 4em;
+    font-weight: 100;
+}
+
+.end-logo{
+    width: 50px;
+}
+
+.end-container-3{
+    display: flex;
+    justify-content:space-between;
+    // border: 1px solid blue;
+}
+
+.end-links-container{
+    display: flex;
+    justify-content:space-between;
+    // border: solid 1px red;
+    width:700px;
+}
+
+.end-list-1, .end-list-2,.end-list-3,.end-list-4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 2em;
+    flex: 1;
+}
+
+.end-logo-container{
+    position: relative;
+    height: 5.5em;
+}
+
+.end-list-1 img{
+    position: absolute;
+    top: -6em;
+    width: 14em;
+}
+
+.end-list-1 p{
+    font-size: .75em;
+    line-height: 1.75em;
+}
+
+.end-main-title{
+    font-size: 20px;
+}
+
+.end-list-2 p{
+    font-size: 12px;
+    
+}
+
+
+.end-list-item{
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.end-list-item:hover{
+    filter: opacity(60%)
+}
+
+.end-list-item-name{
+    text-decoration: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+
+}
+
+.end-data{
+    font-weight:300;
+    font-size: 40px;
+    text-decoration: none;
+    // padding-left: 20px;
+    text-align: center;
+    display:flex;
+}
+
+.end-links{
+    width: 500px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.end-link{
+    text-decoration: none;
+    filter: opacity(60%)
+}
+
+.end-slogan{
+    filter: opacity(60%)
+}
+
+.end-copyright{
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 1200px){
+    #end{
+        display:none;
+    }
+}
+

@@ -1,0 +1,26 @@
+#promo-bar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    // border: 1px solid blue;
+}
+
+.promo-bar-container{
+    // position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #313541;
+    padding: 3em 0em;
+}
+
+.promo-bar-container img{
+    width: 100%;
+    max-width: 12em;
+    opacity: .5;
+
+}
