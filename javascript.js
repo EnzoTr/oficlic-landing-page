@@ -68,3 +68,72 @@ document.querySelector(".btn-popup-news").addEventListener('click',()=>{
     document.querySelector(".popup-background-news").classList.add('hide-popup-news');
 })
 
+// Animación al hacer scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const qsSection = document.querySelector('#quienes-somos');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    if (qsSection) {
+      observer.observe(qsSection);
+    }
+  });
+
+//modal de inicio//
+
+ddocument.addEventListener('DOMContentLoaded', function() {
+    const popupNews = document.getElementById('popup-news');
+    const popupBackground = document.querySelector('.popup-background-news');
+    const popupCenter = document.querySelector('.popup-center-news');
+    const closeBtn = document.querySelector('#popup-news .close-btn');
+    
+    // Verificar si ya se mostró el popup antes
+    if (!localStorage.getItem('popupShown')) {
+        // Mostrar ambos elementos (fondo y popup)
+        popupBackground.style.display = 'block';
+        popupCenter.style.display = 'block';
+        
+        // Animación de fade in
+        setTimeout(() => {
+            popupBackground.style.opacity = '1';
+            popupCenter.style.opacity = '1';
+        }, 10);
+        
+        // Cuando se cierra el popup
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Animación de fade out
+            popupBackground.style.opacity = '0';
+            popupCenter.style.opacity = '0';
+            
+            // Ocultar después de la animación
+            setTimeout(() => {
+                popupBackground.style.display = 'none';
+                popupCenter.style.display = 'none';
+                localStorage.setItem('popupShown', 'true');
+            }, 300);
+        });
+        
+        // También puedes guardar cuando se suscribe
+        const subscribeBtn = document.querySelector('.btn-popup-news');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', function() {
+                popupBackground.style.opacity = '0';
+                popupCenter.style.opacity = '0';
+                
+                setTimeout(() => {
+                    popupBackground.style.display = 'none';
+                    popupCenter.style.display = 'none';
+                    localStorage.setItem('popupShown', 'true');
+                }, 300);
+            });
+        }
+    }
+});
+
